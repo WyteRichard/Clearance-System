@@ -1,0 +1,463 @@
+.flexContainer {
+  display: flex;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #266CA9;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+  overflow-y: auto;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+}
+
+.navIcon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.collegeName {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.whiteButton, .ghostButton {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: transparent;
+  color: white;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.whiteButton {
+  background-color: white;
+  color: #0042be;
+  transition: background-color 0.3s;
+}
+
+.whiteButton:hover, .ghostButton:hover {
+  background-color: #3D97FF;
+}
+
+.smallIcon {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  height: 100vh;
+  background-color: #f0f0f0;
+  overflow: hidden;
+}
+
+.mainContent {
+  width: 60%;
+  max-height: 100vh;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  margin: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #4285f4;
+  border-radius: 8px 8px 0 0;
+  color: white;
+}
+
+.dashboardTitle {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.headerButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.headerRight {
+  display: flex;
+  gap: 12px;
+}
+
+.changePasswordButton, .editProfileButton {
+  background-color: white;
+  color: #000;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.changePasswordButton:hover, .editProfileButton:hover {
+  background-color: #d1e7ff;
+}
+
+.logoutButtonContainer {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 0px;
+}
+
+.logoutButton {
+  padding: 8px 16px;
+  color: red;
+  border: 1px solid red;
+  background: transparent;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoutButton:hover {
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+.logoutIcon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 20px 0;
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+.infoCard {
+  flex: 1 1 calc(50% - 30px);
+  background-color: #e0f0ff;
+  padding: 20px;
+  border-radius: 12px;
+  min-width: 250px;
+  text-align: left;
+  margin: 8px 0;
+  font-size: 13px;
+  color: #003366;
+  box-shadow: none;
+}
+
+.infoCard h3 {
+  font-size: 18px;
+  color: #003366;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.infoCard p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #003366;
+}
+
+.infoCard p strong {
+  color: #003366;
+}
+
+.infoCard p span {
+  color: #1a73e8;
+}
+
+.infoCard p:not(:last-child) {
+  border-bottom: 1px solid #b3d1ff;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.saveButton, .cancelButton, .editButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.saveButton {
+  background-color: #42c3ff;
+  color: white;
+}
+
+.cancelButton {
+  background-color: #ffffff;
+  color: 000;
+}
+
+.editButton {
+  background-color: #2196f3;
+  color: white;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.academicYear, .semesterBadge {
+  padding: 5px 10px;
+  background-color: #E6F2FF;
+  color: #0042be;
+  border-radius: 5px;
+}
+
+.modal {
+  position: absolute;
+  right: 0;
+  top: 60px;
+  background-color: white;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  z-index: 1000;
+}
+
+.modal ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.modal ul li {
+  padding: 12px 16px;
+  cursor: pointer;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e1e4e8;
+}
+
+.modal ul li:last-child {
+  border-bottom: none;
+}
+
+.modal ul li:hover {
+  background-color: #f6f8fa;
+}
+
+.cardGrid {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  min-height: 300px;
+  text-align: center;
+}
+
+.placeholder {
+  font-size: 4rem;
+  color: #888;
+}
+
+.studentAccountContainer {
+  display: flex;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.studentAccountContainer .sidebar {
+  width: 250px;
+  background-color: #266CA9;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.studentAccountContainer .cardGrid {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.studentAccountContainer input[type="text"],
+.studentAccountContainer input[type="email"],
+.studentAccountContainer input[type="date"],
+.studentAccountContainer select {
+  width: 40%;
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.studentAccountContainer input[type="text"]:focus,
+.studentAccountContainer input[type="email"]:focus,
+.studentAccountContainer input[type="date"]:focus,
+.studentAccountContainer select:focus {
+  border-color: #0042be;
+  box-shadow: 0 0 5px rgba(0, 66, 190, 0.5);
+}
+
+.input {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  color: #003366;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f7f7f7;
+  transition: border-color 0.3s;
+}
+
+.editingInput {
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  border-color: #4285f4;
+  box-shadow: 0 0 5px rgba(66, 133, 244, 0.5);
+  outline: none;
+}
+
+.studentAccountContainer .buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  .flexContainer {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .cardGrid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .generalInfo {
+    width: 100%;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .flexContainer {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .mainContent {
+    padding: 10px;
+  }
+
+  .dashboardTitle {
+    font-size: 18px;
+  }
+
+  .profilePic {
+    width: 50px;
+    height: 50px;
+  }
+
+  .studentDetails {
+    font-size: 12px;
+  }
+
+  .generalInfoLabel, .generalInfoValue {
+    font-size: 12px;
+  }
+  
+}
