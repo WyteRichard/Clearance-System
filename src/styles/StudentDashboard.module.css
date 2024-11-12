@@ -1,0 +1,322 @@
+.flexContainer {
+  display: flex;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #266CA9;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+}
+
+.navIcon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.collegeName {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.whiteButton, .ghostButton {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: transparent;
+  color: white;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.whiteButton {
+  background-color: white;
+  color: #266CA9;
+  transition: background-color 0.3s;
+}
+
+.whiteButton:hover, .ghostButton:hover {
+  background-color: #46acf5;
+  color: #266CA9;
+}
+
+  .smallIcon {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+  }
+  
+  .mainContent {
+    width: 100%;
+    max-width: calc(100% - 250px);
+    padding: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .dashboardTitle {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .headerRight {
+    display: flex;
+    gap: 12px;
+  }
+  
+  .academicYear, .semesterBadge {
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .avatar {
+    width: 30px;
+    height: 30px;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -5px;
+    cursor: pointer;
+  }
+
+  .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+  .cardGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-height: calc(100vh - 150px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card {
+    background-color: white;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100%;
+  }
+
+  .cardContent {
+    flex-grow: 1;
+    overflow-y: auto;
+    max-height: 100px;
+    padding: 5px;
+  }
+  
+  .cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3px;
+  }
+
+  .cardHeader2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .cardTitle {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .greenIcon, .yellowIcon, .redIcon {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+  }
+  
+  .greenIcon {
+    background-color: #28a745;
+  }
+  
+  .yellowIcon {
+    background-color: #ffc107;
+  }
+  
+  .redIcon {
+    background-color: #A020F0;
+  }
+  
+  .boldText {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .smallText {
+    font-size: 14px;
+    color: #666;
+  }
+
+  .overallProgress {
+    font-size: 14px;
+    color: #666;
+    margin: 5px;
+  }
+  
+  .progressContainer {
+    width: 100%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .progressBar {
+    height: 100%;
+    background-color: #266ca9;
+    border-radius: 5px;
+  }
+  
+  .datesList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .dateItem p {
+    margin-top: 4px;
+    color: #666;
+    font-size: 12px;
+  }
+  
+  .recentActivity {
+    grid-column: 1 / -1;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-top: 20px;
+  }
+  
+  .tabs {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .tabButton {
+    padding: 8px 16px;
+    margin-right: 8px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 4px;
+  }
+  
+  .activeTab {
+    background-color: #1C82FF;
+    color: white;
+  }
+  
+  .activityItem {
+    list-style-type: none;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    color: #333;
+  }
+
+  .activityItem:last-child {
+    border-bottom: none;
+  }
+  
+  .activityDate {
+    float: right;
+    color: #666;
+  }
+
+  .modal {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background-color: white;
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 200px; 
+    z-index: 1000;
+    overflow: hidden;
+  }
+  
+  .modal ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .modal ul li {
+    padding: 12px 16px;
+    cursor: pointer;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e1e4e8;
+  }
+  
+  .modal ul li:last-child {
+    border-bottom: none;
+  }
+  
+  .modal ul li:hover {
+    background-color: #f6f8fa;
+  }
+  
+  .modal ul li img {
+    margin-right: 8px;
+    width: 20px;
+    height: 20px;
+  }
+  

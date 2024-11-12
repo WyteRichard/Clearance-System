@@ -1,0 +1,397 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.flexContainer {
+  display: flex;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #266ca9;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  position: fixed; /* Make the sidebar fixed */
+  height: 100%; /* Ensure it occupies full height */
+  overflow-y: auto; /* Allow scrolling if content exceeds */
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+}
+
+.navIcon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.collegeName {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.whiteButton, .ghostButton {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: transparent;
+  color: white;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.whiteButton {
+background-color: white;
+color: #266CA9;
+transition: background-color 0.3s;
+}
+
+.whiteButton:hover, .ghostButton:hover {
+background-color: #46acf5;
+color: #266CA9;
+}
+
+.mainContent {
+  margin-left: 250px; /* Add margin to ensure content doesn't overlap with the sidebar */
+  padding: 20px;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.tableContainer {
+  overflow-y: auto; /* Allow vertical scrolling if the table exceeds height */
+  max-height: calc(100vh - 150px); /* Adjust this value based on your layout */
+  padding: 10px; /* Add padding if needed */
+  background-color: white; /* Background for the table container */
+  border-radius: 8px; /* Match with your table style */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional shadow for separation */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.dashboardTitle {
+  font-size: 24px;
+  color: #333;
+}
+
+.headerRight {
+  display: flex;
+  gap: 12px;
+}
+
+.academicYear, .semesterBadge {
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: -5px;
+  cursor: pointer;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pageTitle {
+  font-size: 24px;
+  color: #333;
+}
+
+.filterContainer {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  width: 80%;
+  max-width: 400px;
+  margin-left: auto;
+}
+
+.inputBox {
+  flex-grow: 1;
+}
+
+.searchInput, .filterButton {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  color: #333;
+}
+
+.clearanceTable {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.clearanceTable th, .clearanceTable td {
+  padding: 8px 10px; /* Reduced padding to decrease row height */
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  line-height: 1.2;
+}
+
+.clearanceTable th {
+  color: rgb(46, 46, 46);
+}
+
+.clearanceTable tr:last-child td {
+  border-bottom: none;
+}
+
+.actionIcon {
+  width: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+      width: 100%;
+      height: auto;
+  }
+
+  .filterContainer, .clearanceTable {
+      padding: 10px;
+  }
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContent {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+.modalButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modalButton:hover {
+  background-color: #f0f0f0;
+}
+
+.modal {
+  position: absolute;
+  right: 0;
+  top: 60px;
+  background-color: white;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.modal ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.modal ul li {
+  padding: 12px 16px;
+  cursor: pointer;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e1e4e8;
+}
+
+.modal ul li:last-child {
+  border-bottom: none;
+}
+
+.modal ul li:hover {
+  background-color: #f6f8fa;
+}
+
+.modal ul li img {
+  margin-right: 8px;
+  width: 20px;
+  height: 20px; 
+}
+
+.alert {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f9fffb;
+  border: 1px solid #4caf50;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 360px;
+  z-index: 1000;
+  text-align: left;
+  overflow: hidden;
+}
+
+.success {
+  background-color: #f9fffb;
+  border: 1px solid #4caf50;
+}
+
+.error {
+  background-color: #ffe5e5;
+  border: 1px solid #e74c3c;
+}
+
+.alertTopBar {
+  width: 100%;
+  height: 4px;
+  background-color: #4caf50;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  animation: countdown 3s linear forwards;
+}
+
+.alertTopBar.error {
+  background-color: #e74c3c;
+}
+
+@keyframes countdown {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+.alertContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.alertIcon {
+  width: 30px;
+  height: 30px;
+  margin-right: 16px;
+}
+
+.alert span {
+  font-size: 17px;
+  color: #388e3c;
+  flex-grow: 1;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.alert.error span {
+  color: #e74c3c;
+}
+
+.alertButton {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.alertButton:hover {
+  background-color: #388e3c;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+.alert.error .alertButton {
+  background-color: #e74c3c;
+}
+
+.alert.error .alertButton:hover {
+  background-color: #c0392b;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  color: #777;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  color: #555;
+}
+

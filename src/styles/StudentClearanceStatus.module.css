@@ -1,0 +1,377 @@
+.flexContainer {
+    display: flex;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #266ca9;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+.navIcon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.collegeName {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.whiteButton, .ghostButton {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: transparent;
+    color: white;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.whiteButton {
+    background-color: white;
+    color: #266ca9;
+    transition: background-color 0.3s;
+}
+
+.whiteButton:hover, .ghostButton:hover {
+    background-color: #46acf5;
+    color: #266CA9;
+  }
+
+.mainContent {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.dashboardTitle {
+    font-size: 24px;
+    color: #333;
+}
+
+.headerRight {
+    display: flex;
+    gap: 12px;
+}
+
+.academicYear, .semesterBadge {
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -5px;
+    cursor: pointer;
+  }
+
+  .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.filterContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.filterButton {
+    width: 150px;
+    height: 35px;
+    padding: 7px;
+    margin-right: 5px;
+    border-radius: 4px;
+    background-color: white;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.printButton {
+    background-color: #266ca9;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.printIcon {
+    height: 15px;
+    width: 15px;
+    margin-right: 5px;
+}
+
+.printpdf {
+    height: 15px;
+    width: 15px;
+    margin-right: 5px;
+}
+
+.tableContainer {
+    background-color: white;
+    padding: 3px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.clearanceTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.clearanceTable th, .clearanceTable td {
+    padding: 12px 15px;
+    text-align: left;
+    color: #333;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.clearanceTable th {
+    color: #333;
+}
+
+.clearanceTable tr:last-child td {
+    border-bottom: none;
+}
+
+.remarksColumn {
+    width: 400px;
+    max-width: 500px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    vertical-align: top;
+}
+
+.viewLogsButton {
+    padding: 8px 12px;
+    background-color: #fff;
+    color: #000;
+    border: 0.5px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 2px;
+    margin-top: 1px;
+}
+
+.viewLogsButton:hover {
+    background-color: #a8a8a8;
+}
+
+
+.modal {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background-color: white;
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    z-index: 1000;
+    overflow: hidden;
+  }
+  
+  .modal ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .modal ul li {
+    padding: 12px 16px;
+    cursor: pointer;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e1e4e8;
+  }
+  
+  .modal ul li:last-child {
+    border-bottom: none;
+  }
+  
+  .modal ul li:hover {
+    background-color: #f6f8fa;
+  }
+  
+  .modal ul li img {
+    margin-right: 8px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .logo {
+    display: none;
+}
+
+.invisible {
+    display: none;
+}
+
+.print-only {
+    display: none;
+}
+
+@media print {
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+
+    .logo {
+        display: block !important;
+        width: 100px;
+        margin: 0 auto 10px;
+    }
+
+    .invisible {
+        display: block !important;
+        margin-bottom: 20px;
+    }
+
+    .clearanceTable {
+        width: 80%;
+        border-collapse: collapse;
+        margin: 20px auto;
+    }
+
+    .clearanceTable th, .clearanceTable td {
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .no-print {
+        display: none !important;
+    }
+
+    .printHeader, .studentInfo {
+        text-align: center;
+    }
+
+    th, td {
+        text-align: left;
+    }
+}
+
+.modalBackdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modalContent {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modalTitle {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    color: #333;
+    text-align: center;
+}
+
+.logsContainer {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    max-height: 400px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.logEntry {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    color: #333;
+}
+
+.logEntry:last-child {
+    border-bottom: none;
+}
+
+.closeButton {
+    display: block;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #c3c3c3;
+    color: white;
+    margin: 20px auto 0; /* Centered horizontally */
+    transition: background-color 0.3s;
+}
+
+.closeButton:hover {
+    background-color: #979797;
+}
+
+
+

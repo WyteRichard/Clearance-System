@@ -1,0 +1,207 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-image: url('../assets/rc background 1.jpg');
+}
+
+.loginContainer {
+  display: flex;
+  width: 70%;
+  max-width: 900px;
+  height: 500px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2); 
+}
+
+.leftPanel {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  border-radius: 20px 0 0 20px;
+}
+
+.rightPanel {
+  flex: 1;
+  background: linear-gradient(550deg, #1669EF 0%, #266ca9 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.loginTitle {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.inputField {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  font-size: 16px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s;
+}
+
+.inputField:focus {
+  border-color: #1669EF;
+}
+
+.inputField::placeholder {
+  color: #aaa;
+  opacity: 0.8;
+}
+
+.inputContainer {
+  width: 100%;
+  position: relative;
+  margin: 10px 0;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #666;
+}
+
+.passwordContainer {
+  position: relative;
+  width: 100%;
+}
+
+.eyeIcon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+.forgotPassword {
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+  color: #1669EF;
+  margin-top: 5px;
+}
+
+.forgotPassword a {
+  color: #1669EF;
+  text-decoration: none;
+}
+
+.loginButton {
+  padding: 15px;
+  background-color: #266ca9;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: block;
+  margin: 25px auto 0;
+  width: 60%;
+  text-align: center;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.loginButton:hover {
+  background-color: #1457cc;
+  transform: translateY(-3px);
+}
+
+.signupPrompt {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.signupPrompt a {
+  color: #1669EF;
+  text-decoration: none;
+}
+
+.logo {
+  width: 200px;
+  height: 200px;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.systemTitle {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px 0 10px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .loginContainer {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .rightPanel {
+    border-radius: 0 0 20px 20px;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+}
+
+.errorInput {
+  border: 2px solid red;
+  animation: shake 0.5s ease;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
