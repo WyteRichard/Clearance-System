@@ -2,7 +2,10 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
+<<<<<<< HEAD
   "homepage": "https://WyteRichard.github.io/Clearance-System",
+=======
+>>>>>>> e687d109bde3a13c32411a736a2e6ec7a77f1153
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
@@ -25,8 +28,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+<<<<<<< HEAD
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
+=======
+>>>>>>> e687d109bde3a13c32411a736a2e6ec7a77f1153
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -53,7 +59,11 @@
   },
   "devDependencies": {
     "eslint": "^8.57.1",
+<<<<<<< HEAD
     "eslint-plugin-react-hooks": "^5.0.0",
     "gh-pages": "^5.0.0"
+=======
+    "eslint-plugin-react-hooks": "^5.0.0"
+>>>>>>> e687d109bde3a13c32411a736a2e6ec7a77f1153
   }
 }
